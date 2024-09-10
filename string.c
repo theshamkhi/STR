@@ -154,15 +154,7 @@ int main(){
     scanf(" %[^\n]", &pstr);
     printf("Enter a sous-string:\n");
     scanf(" %[^\n]", &sstr);
-
-    for(i=0; i<strlength(pstr); i++){
-        for(int j=0; j<strlength(sstr); j++){
-            if(pstr[i] == sstr[j]){
-            s++;
-            }
-        }
-    }
-    if(s >= strlength(sstr)){
+    if(strstr(pstr, sstr)){
         printf("the sous-string %s existe in %s\n", sstr, pstr);
     }
     else
